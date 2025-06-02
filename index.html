@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdVenture - Creative Advertising</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Comic Neue', cursive;
+            background-color: #f8f9fa;
+            overflow-x: hidden;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #FF6B6B, #4ECDC4);
+            min-height: 100vh;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-family: 'Bangers', cursive;
+            font-size: 2.5rem;
+            color: white;
+            text-shadow: 3px 3px 0 #333;
+            transform: rotate(-5deg);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            position: relative;
+            padding: 0.5rem 1rem;
+            transition: transform 0.3s;
+        }
+
+        .nav-links a:hover {
+            transform: scale(1.1);
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 4rem auto;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .hero-text {
+            flex: 1;
+            color: white;
+        }
+
+        .hero-text h1 {
+            font-family: 'Bangers', cursive;
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            text-shadow: 4px 4px 0 #333;
+        }
+
+        .hero-text p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            text-shadow: 2px 2px 0 rgba(0,0,0,0.2);
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: #FFD93D;
+            color: #333;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 50px;
+            transform: rotate(-2deg);
+            transition: transform 0.3s;
+            box-shadow: 4px 4px 0 #333;
+        }
+
+        .cta-button:hover {
+            transform: rotate(2deg) scale(1.1);
+        }
+
+        .comic-bubbles {
+            position: absolute;
+            pointer-events: none;
+        }
+
+        .bubble {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Bangers', cursive;
+            padding: 1rem;
+            box-shadow: 3px 3px 0 #333;
+            animation: float 3s infinite alternate ease-in-out;
+        }
+
+        @keyframes float {
+            from { transform: translateY(0) rotate(-5deg); }
+            to { transform: translateY(-20px) rotate(5deg); }
+        }
+
+        .services {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 5px 5px 0 #333;
+            transform: rotate(-2deg);
+            transition: transform 0.3s;
+            text-align: center;
+        }
+
+        .service-card:hover {
+            transform: rotate(2deg) translateY(-10px);
+        }
+
+        .service-card h3 {
+            font-family: 'Bangers', cursive;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .service-card p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .floating-elements {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+        }
+
+        .floating-element {
+            position: absolute;
+            font-size: 2rem;
+            animation: float-random 4s infinite alternate ease-in-out;
+        }
+
+        @keyframes float-random {
+            from { transform: translate(0, 0) rotate(0deg); }
+            to { transform: translate(20px, -20px) rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <nav class="nav">
+            <div class="logo">AdVenture</div>
+            <div class="nav-links">
+                <a href="#services">Services</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>We Make Your Brand POP! 💥</h1>
+                <p>Turn your boring business into an exciting adventure with our creative advertising solutions!</p>
+                <a href="#contact" class="cta-button">Start Your Adventure! 🚀</a>
+            </div>
+        </div>
+
+        <div class="services">
+            <div class="service-card">
+                <h3>Digital Magic ✨</h3>
+                <p>Social media, websites, and digital campaigns that capture attention!</p>
+            </div>
+            <div class="service-card">
+                <h3>Brand Power 💪</h3>
+                <p>Logo design, brand identity, and storytelling that makes you unforgettable!</p>
+            </div>
+            <div class="service-card">
+                <h3>Creative Boom 🎨</h3>
+                <p>Print, video, and creative content that brings your ideas to life!</p>
+            </div>
+        </div>
+
+        <div class="floating-elements">
+            <span class="floating-element" style="top: 20%; left: 10%;">🎯</span>
+            <span class="floating-element" style="top: 30%; right: 15%;">💡</span>
+            <span class="floating-element" style="bottom: 25%; left: 20%;">🎨</span>
+            <span class="floating-element" style="bottom: 40%; right: 25%;">⭐</span>
+            <span class="floating-element" style="top: 60%; left: 80%;">🚀</span>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
